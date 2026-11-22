@@ -34,7 +34,10 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
-    if (n === 1) return 1;
+    if (n < 0) {
+        throw new RangeError('n должно быть неотрицательным');
+    }
+    if (n === 0 || n === 1) return n;
     return n + recSumTo(n - 1);
 }
 
@@ -43,10 +46,12 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
+    if (n < 0) {
+        throw new RangeError('n должно быть неотрицательным');
+    }
     if (n === 0 || n === 1) return 1;
     return n * factorial(n - 1);
 }
-
 /**
  * Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
  * @param {*} n
@@ -60,10 +65,13 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
+    if (n < 1) {
+        throw new RangeError('n должно быть >= 1');
+    }
     if (n <= 2) return 1;
     let a = 1, b = 1;
     for (let i = 3; i <= n; i++) {
-        let c = a + b;
+        const c = a + b;
         a = b;
         b = c;
     }
