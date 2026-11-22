@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оформить заказ | CandleCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">CandleCraft</div>
+        <nav class="header__nav">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="contact.html">Заказ</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Оформить заказ</h1>
+        <p class="page-subtitle">Заполните форму — мы свяжемся с вами</p>
+
+        <form class="form" id="order-form">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" placeholder="Ваше имя">
+
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" placeholder="you@example.com">
+
+            <label class="form__label" for="candle">Свеча</label>
+            <select class="form__select" id="candle">
+                <option value="Десерт">Десерт — 500 руб.</option>
+                <option value="Сухоцветы">Сухоцветы — 600 руб.</option>
+                <option value="Морской бриз">Морской бриз — 550 руб.</option>
+                <option value="Лаванда">Лаванда — 520 руб.</option>
+            </select>
+
+            <span class="form__label">Способ доставки</span>
+            <label class="form__label-radio"><input class="form__radio" type="radio" name="delivery" value="Курьер" checked> Курьер</label>
+            <label class="form__label-radio"><input class="form__radio" type="radio" name="delivery" value="Самовывоз"> Самовывоз</label>
+            <label class="form__label-radio"><input class="form__radio" type="radio" name="delivery" value="Почта"> Почта</label>
+
+            <label class="form__label" for="comment">Комментарий</label>
+            <textarea class="form__textarea" id="comment" rows="3" placeholder="Пожелания к заказу"></textarea>
+
+            <div class="form__checkbox-row">
+                <input type="checkbox" id="agree">
+                <label for="agree">Согласен на обработку персональных данных</label>
+            </div>
+
+            <button class="form__submit" type="submit">Отправить заказ</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>2026 CandleCraft. Дарим тепло  /ᐠ｡ꞈ｡ᐟ\.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
